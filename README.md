@@ -1,2 +1,2 @@
-# mandatory-todo-list
+# Mandatory - Todo list
 Mandatory - Todo list
