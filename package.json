@@ -1,0 +1,36 @@
+{
+  "name": "advjs-reactmandatory1",
+  "version": "1.0.0",
+  "description": "Mandatory 1 - Todo list",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "mandatory",
+    "react",
+    "css",
+    "webpack",
+    "buildenv"
+  ],
+  "author": "Khoi Le",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-notifier": "^1.6.0"
+  }
+}
