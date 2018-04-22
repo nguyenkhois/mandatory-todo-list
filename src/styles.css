@@ -15,7 +15,7 @@ button{
 }
 button:hover{background-color: #555555;color: white;}
 
-#app{width: 25em;}
+#app{width: 26em;}
 #app input[type="text"]{
     /* Clear the user's operating system's theme */
     -webkit-appearance: none;
@@ -31,11 +31,12 @@ button:hover{background-color: #555555;color: white;}
     border-radius: 5px;
     font-size: 1.1em;
 
-    width: 100%;
+    width: 95%;
     height: 2em;
 }
 #app input[type="text"]:focus{border: 1px solid #0094ff;box-shadow: 0 0 5px #0094ff;}
 #app input[type="checkbox"]{width: 1.3em;height: 1.3em;position: relative;}
+#app > div{padding: 15px;margin:0;position: relative;user-select: none;-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;background: #f8f8f8;border: thin solid #cbcbcb;border-radius: 5px;}
 #app > div > p:first-child {font-size: 2em;font-weight: bold;text-align: center;}
 #app > div > input {padding-left: 0.5em;padding-right: 0.5em;}
 #app > div > div > p:first-child {font-size: 1.1em;font-weight: bold;}
