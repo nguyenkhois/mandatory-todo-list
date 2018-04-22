@@ -1,6 +1,9 @@
 # Mandatory - Todo list
 The simple web application created by using HTML, CSS, React. All are separate for simple understanding.
 
+## Screenshot
+![Screenshot](src/screenshot.png)
+
 ## Compatibility
 Build environment is compatible with:
 * Windows
