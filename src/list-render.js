@@ -3,12 +3,13 @@ import React from 'react';
 
 export class TodoList extends React.Component{
     render(){
-        if (this.props.items.length > 0)
+        let arrTasks = this.props.items;
+        if (arrTasks.length > 0)
             return(
                 <div>
                     <p>Uncompleted tasks</p>
                     <ul>           
-                        {this.props.items.map((item,key)=>{                    
+                        {arrTasks.map((item,key)=>{                    
                             return (
                                 <li key={key}>
                                     <input type="checkbox" onChange={e=>this.props.fnCheck(item.id,e)}/>
@@ -26,16 +27,17 @@ export class TodoList extends React.Component{
 
 export class DoneList extends React.Component{
     render(){
-        if (this.props.items.length > 0)
+        let arrTasks = this.props.items;
+        if (arrTasks.length > 0)
             return(
                 <div>
                 <p>Completed tasks</p>
                     <ul>           
-                        {this.props.items.map((item,key)=>{                    
+                        {arrTasks.map((item,key)=>{                    
                             return (
-                                <li key={key} className="strike-text">
+                                <li key={key}>
                                     <input type="checkbox" onChange={e=>this.props.fnCheck(item.id,e)} checked/>
-                                    {item.description}
+                                    <span>{item.description}</span>
                                     <button type="button" onClick={e=>this.props.fnRemove(item.id,e)}>Remove</button>
                                 </li>
                             )

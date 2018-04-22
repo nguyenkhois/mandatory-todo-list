@@ -36,7 +36,8 @@ button:hover{background-color: #555555;color: white;}
 }
 #app input[type="text"]:focus{border: 1px solid #0094ff;box-shadow: 0 0 5px #0094ff;}
 #app input[type="checkbox"]{width: 1.3em;height: 1.3em;position: relative;}
-#app > div > p{font-size: 2em;font-weight: bold;text-align: center;}
-#app > div > div > p{font-size: 1.1em;font-weight: bold;}
-
-.strike-text{text-decoration: line-through;}
+#app > div > p:first-child {font-size: 2em;font-weight: bold;text-align: center;}
+#app > div > input {padding-left: 0.5em;padding-right: 0.5em;}
+#app > div > div > p:first-child {font-size: 1.1em;font-weight: bold;}
+#app > div > div > ul > li span {text-decoration: line-through;}
+#app > div > div > button {padding: 0.5em; border-radius: 20px;}

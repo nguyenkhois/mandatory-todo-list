@@ -1,7 +1,7 @@
 "use strict";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './styles.css';
+import Styles from './styles.css';
 import {TodoList, DoneList} from './list-render';
 
 class TodoApp extends React.Component{
@@ -52,7 +52,7 @@ class TodoApp extends React.Component{
         return (
             <div>
                 <p>Todo list</p>
-                <input onChange={(e)=>this.handleInputChange(e)} onKeyDown={(e)=>this.handleEnterKey(e)} type="text" value={this.state.userInput} minLength="1" maxLength="50"/>
+                <input onChange={(e)=>this.handleInputChange(e)} onKeyDown={(e)=>this.handleEnterKey(e)} value={this.state.userInput} type="text" minLength="1" maxLength="50" placeholder="Enter your task"/>
                 <TodoList items={todoTasks} fnCheck={this.handleCheck} fnRemove={this.handleRemove}/>
                 <DoneList items={doneTasks} fnCheck={this.handleCheck} fnRemove={this.handleRemove} fnClearCompleted={this.handleClearCompleted}/>
             </div>            
