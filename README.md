@@ -1,5 +1,5 @@
 # Mandatory - Todo list
-The simple web application created by using HTML, CSS, React. All are separate for simple understanding source code ([View online demo](http://nguyenkhois.github.io/mandatory-todo-list/dist)).
+The simple web application created by using HTML, CSS, React ([View online demo](http://nguyenkhois.github.io/mandatory-todo-list/dist)).
 
 ## Screenshot
 ![Screenshot](src/screenshot.png)
@@ -9,6 +9,7 @@ Build environment is compatible with:
 * Windows
 * MacOS
 * Debian
+
 Webpack Dev Server reload automatically your web browser whenever a change is made to one of your files.
 
 ## Installation
