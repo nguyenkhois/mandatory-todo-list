@@ -32,7 +32,7 @@ class TodoApp extends React.Component{
         e.preventDefault();
         let itemIndex = this.state.items.findIndex(item=>item.id===itemId);
         this.state.items[itemIndex].isDone = e.target.checked;
-        this.forceUpdate(); //rerender list
+        this.forceUpdate(); //Rerender the app
     }
 
     handleRemove(itemId,e){
@@ -52,10 +52,10 @@ class TodoApp extends React.Component{
         return (
             <div>
                 <p>Todo list</p>
-                <input onChange={(e)=>this.handleInputChange(e)} onKeyDown={(e)=>this.handleEnterKey(e)} value={this.state.userInput} type="text" minLength="1" maxLength="50" placeholder="Enter your task"/>
+                <input onChange={e=>this.handleInputChange(e)} onKeyDown={e=>this.handleEnterKey(e)} value={this.state.userInput} type="text" minLength="1" maxLength="50" placeholder="Enter your task"/>
                 <TodoList items={todoTasks} fnCheck={this.handleCheck} fnRemove={this.handleRemove}/>
                 <DoneList items={doneTasks} fnCheck={this.handleCheck} fnRemove={this.handleRemove} fnClearCompleted={this.handleClearCompleted}/>
-            </div>            
+            </div>
         )
     }
 };
