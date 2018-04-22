@@ -15,4 +15,4 @@ Build environment is compatible with:
 
 ## Using
 * Run `npm start` or `npm run start` to start your local web server at `localhost:9000`
-* Run `npm run build` to build your application with `production mode`
+* Run `npm run build` to build your application with `--mode production`
