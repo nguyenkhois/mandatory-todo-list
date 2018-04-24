@@ -12,7 +12,7 @@ export class TodoList extends React.Component{
                         {arrTasks.map((item,key)=>{                    
                             return (
                                 <li key={key}>
-                                    <input type="checkbox" onChange={e=>this.props.fnCheck(item.id,e)}/>
+                                    <input type="checkbox" onClick={e=>this.props.fnCheck(item.id, e)}/>
                                     {item.description}
                                     <button type="button" onClick={e=>this.props.fnRemove(item.id,e)}>Remove</button>
                                 </li>                    
