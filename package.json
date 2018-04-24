@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Mandatory 1 - Todo list",
   "private": true,
-  "scripts": {    
+  "scripts": {
     "start": "webpack-dev-server",
     "copycss": "cp ./src/styles.css ./dist/styles.css",
     "build": "webpack --mode production",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",

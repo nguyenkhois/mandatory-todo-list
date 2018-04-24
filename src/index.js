@@ -8,9 +8,6 @@ class TodoApp extends React.Component{
     constructor(props){
         super(props);
         this.state = {items:[], userInput:''};
-        this.handleCheck = this.handleCheck.bind(this);
-        this.handleRemove = this.handleRemove.bind(this);
-        this.handleClearCompleted = this.handleClearCompleted.bind(this);
     }
 
     handleInputChange(e){
@@ -28,22 +25,21 @@ class TodoApp extends React.Component{
         }    
     }
 
-    handleCheck(itemId,e){
+    handleCheck(itemId, e){
         e.preventDefault();
-        let itemIndex = this.state.items.findIndex(item=>item.id===itemId);
-        this.state.items[itemIndex].isDone = e.target.checked;
-        this.forceUpdate(); //Rerender the app
+        const itemIndex = this.state.items.findIndex(item=>item.id===itemId);
+        const newState = this.state.items.map((item, index) => itemIndex === index ? {...item, isDone: !this.state.items[itemIndex].isDone} : item);
+        this.setState({ items: newState });
     }
 
     handleRemove(itemId,e){
-        let itemIndex = this.state.items.findIndex(item=>item.id===itemId);
-        this.state.items.splice(itemIndex,1);
-        this.forceUpdate();
+        let newState = this.state.items.filter(item => item.id !== itemId);
+        this.setState({items: newState});
     }
 
     handleClearCompleted(e){
-        this.state.items = this.state.items.filter(item=>!item.isDone);
-        this.forceUpdate();
+        let newState = this.state.items.filter(item=>!item.isDone);
+        this.setState({items: newState});
     }
 
     render(){
@@ -53,8 +49,8 @@ class TodoApp extends React.Component{
             <div>
                 <p>Todo list</p>
                 <input onChange={e=>this.handleInputChange(e)} onKeyDown={e=>this.handleEnterKey(e)} value={this.state.userInput} type="text" minLength="1" maxLength="50" placeholder="Enter your task"/>
-                <TodoList items={todoTasks} fnCheck={this.handleCheck} fnRemove={this.handleRemove}/>
-                <DoneList items={doneTasks} fnCheck={this.handleCheck} fnRemove={this.handleRemove} fnClearCompleted={this.handleClearCompleted}/>
+                <TodoList items={todoTasks} fnCheck={(itemId, e) => this.handleCheck(itemId, e)} fnRemove={(itemId, e)=>this.handleRemove(itemId, e)}/>
+                <DoneList items={doneTasks} fnCheck={(itemId, e)=>this.handleCheck(itemId, e)} fnRemove={(itemId, e)=>this.handleRemove(itemId, e)} fnClearCompleted={e=>this.handleClearCompleted(e)}/>
             </div>
         )
     }
