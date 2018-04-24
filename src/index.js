@@ -18,17 +18,17 @@ class TodoApp extends React.Component{
         if (e.keyCode === 13){//Handle enter key
             let userInput = this.state.userInput;
             if (userInput.length > 0){
-                let newItem = { id: Date.now(), description: userInput, isDone: false};
-                this.state.items.push(newItem);
-                this.setState({userInput: ''});
+                let newItem = [{ id: Date.now(), description: userInput, isDone: false}];
+                let newState = this.state.items.concat(newItem); //using non-mutating methods
+                this.setState({items: newState,userInput: ''});
             }
-        }    
+        }            
     }
 
     handleCheck(itemId, e){
         e.preventDefault();
         const itemIndex = this.state.items.findIndex(item=>item.id===itemId);
-        const newState = this.state.items.map((item, index) => itemIndex === index ? {...item, isDone: !this.state.items[itemIndex].isDone} : item);
+        const newState = this.state.items.map((item, index) => index === itemIndex ? {...item, isDone: !this.state.items[itemIndex].isDone} : item);
         this.setState({ items: newState });
     }
 
