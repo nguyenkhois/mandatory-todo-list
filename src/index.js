@@ -46,7 +46,7 @@ class TodoApp extends React.Component{
             <div>
                 <p>Todo list</p>
                 <input onChange={e=>this.handleInputChange(e)} onKeyDown={e=>this.handleEnterKey(e)} value={this.state.userInput} type="text" minLength="1" maxLength="50" placeholder="Enter your task"/>
-                <TodoList items={todoTasks} fnCheck={(itemId, e) => this.handleCheck(itemId, e)} fnRemove={(itemId, e)=>this.handleRemove(itemId, e)}/>
+                <TodoList items={todoTasks} fnCheck={(itemId, e)=>this.handleCheck(itemId, e)} fnRemove={(itemId, e)=>this.handleRemove(itemId, e)}/>
                 <DoneList items={doneTasks} fnCheck={(itemId, e)=>this.handleCheck(itemId, e)} fnRemove={(itemId, e)=>this.handleRemove(itemId, e)} fnClearCompleted={e=>this.handleClearCompleted(e)}/>
             </div>
         )
