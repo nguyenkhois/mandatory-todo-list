@@ -20,7 +20,7 @@ class TodoApp extends React.Component{
             if (userInput.length > 0){
                 let newItem = [{ id: Date.now(), description: userInput, isDone: false}];
                 let newState = this.state.items.concat(newItem); //using non-mutating methods
-                this.setState({items: newState,userInput: ''});
+                this.setState({items: newState, userInput: ''});
             }
         }            
     }

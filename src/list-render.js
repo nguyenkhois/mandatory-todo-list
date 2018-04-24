@@ -20,7 +20,7 @@ export class TodoList extends React.Component{
                         })}
                     </ul>
                 </div>
-            );
+            )
         return null
     }
 };
@@ -36,7 +36,7 @@ export class DoneList extends React.Component{
                         {arrTasks.map((item,key)=>{                    
                             return (
                                 <li key={key}>
-                                    <input type="checkbox" onChange={e=>this.props.fnCheck(item.id,e)} checked/>
+                                    <input type="checkbox" onClick={e=>this.props.fnCheck(item.id,e)} checked/>
                                     <span>{item.description}</span>
                                     <button type="button" onClick={e=>this.props.fnRemove(item.id,e)}>Remove</button>
                                 </li>
@@ -45,7 +45,7 @@ export class DoneList extends React.Component{
                     </ul>
                     <button type="button" onClick={e=>this.props.fnClearCompleted(e)}>Clear completed</button>
                 </div>                    
-            );
+            )
         return null
     }
 };
