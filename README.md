@@ -21,5 +21,6 @@ Webpack Dev Server reload automatically your web browser whenever a change is ma
 * Run `npm run build:all` to build all your files (*.js and styles.css) with `--mode production` to `dist` folder
 
 ## References
+* [Optimizing performance](https://reactjs.org/docs/optimizing-performance.html)
 * [Non-mutating methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Accessor_methods)
 * [Expressions and operators in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
