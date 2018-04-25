@@ -11,12 +11,13 @@ class TodoApp extends React.Component{
     }
 
     handleInputChange(e){
-        this.setState({userInput: e.target.value.trim()});
+        this.setState({userInput: e.target.value});
     }
 
     handleEnterKey(e){
-        if (e.keyCode === 13 && this.state.userInput.length > 0){
-            let newItem = {id: Date.now(), description: this.state.userInput, isDone: false};
+        let userInput = this.state.userInput.trim();
+        if (e.keyCode === 13 && userInput.length > 0){
+            let newItem = {id: Date.now(), description: userInput, isDone: false};
             let newState = this.state.items.concat([newItem]); //using non-mutating methods
             this.setState({items: newState, userInput: ''});            
         }            
