@@ -26,7 +26,7 @@ class TodoApp extends React.Component{
     handleCheck(itemId, e){
         e.preventDefault();
         const itemIndex = this.state.items.findIndex(item=>item.id===itemId);
-        const newState = this.state.items.map((item, index) => index === itemIndex ? {...item, isDone: !this.state.items[itemIndex].isDone} : item);
+        const newState = this.state.items.map((item, index) => index === itemIndex ? {...item, isDone: !item.isDone} : item);
         this.setState({ items: newState });
     }
 
