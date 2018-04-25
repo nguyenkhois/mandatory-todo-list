@@ -11,7 +11,7 @@ class TodoApp extends React.Component{
     }
 
     handleInputChange(e){
-        e.target.value.trim().length > 0 ? this.setState({userInput: e.target.value}) : null;        
+        this.setState({userInput: e.target.value.trim()});
     }
 
     handleEnterKey(e){
